@@ -7,11 +7,11 @@ android {
     compileSdk 35
 
     defaultConfig {
-        applicationId 'cz.vitekzavodnik.game'
+        applicationId 'cz.michal.testgrafika'
         minSdk 23
         targetSdk 35
-        versionCode 4
-        versionName '2.0'
+        versionCode 1
+        versionName '1.0-test'
     }
 
     buildTypes {
@@ -20,7 +20,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
-            applicationIdSuffix '.debug'
             versionNameSuffix '-debug'
         }
     }
