@@ -13,7 +13,7 @@ import java.util.Locale;
 public final class HUDView extends View {
     public interface Listener { void onPauseRequested(); }
 
-    private final GameRenderer renderer;
+    private final SafeGameRenderer renderer;
     private final Listener listener;
     private final Paint p = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final float d;
@@ -26,12 +26,12 @@ public final class HUDView extends View {
     private final RectF jumpRect = new RectF();
     private final RectF actionRect = new RectF();
 
-    public HUDView(Context context, GameRenderer renderer, Listener listener) {
+    public HUDView(Context context, SafeGameRenderer renderer, Listener listener) {
         super(context);
         this.renderer=renderer; this.listener=listener;
         d=getResources().getDisplayMetrics().density;
-        setLayerType(View.LAYER_TYPE_SOFTWARE,null);
         p.setTypeface(android.graphics.Typeface.create("sans", android.graphics.Typeface.BOLD));
+        setWillNotDraw(false);
     }
 
     @Override protected void onDraw(Canvas c) {
@@ -84,7 +84,7 @@ public final class HUDView extends View {
             c.drawRoundRect(w/2f-mw/2,90*d,w/2f+mw/2,142*d,15*d,15*d,p);
             p.setColor(Color.WHITE); c.drawText(s.message,w/2f,123*d,p);
         }
-        invalidate();
+        postInvalidateOnAnimation();
     }
 
     private void button(Canvas c,RectF r,String text,int color){
