@@ -1,0 +1,55 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+
+    <!-- dark racing badge background -->
+    <path android:fillColor="#071B35" android:pathData="M0,0h108v108h-108z"/>
+    <path android:fillColor="#0F5BC4" android:pathData="M0,0h108v18h-108z"/>
+    <path android:fillColor="#F6D31F" android:pathData="M0,18h108v5h-108z"/>
+
+    <!-- chequered flag corners -->
+    <path android:fillColor="#FFFFFF" android:pathData="M4,5h8v8h-8z M20,5h8v8h-8z M12,13h8v8h-8z M28,13h8v8h-8z"/>
+    <path android:fillColor="#101820" android:pathData="M12,5h8v8h-8z M28,5h8v8h-8z M4,13h8v8h-8z M20,13h8v8h-8z"/>
+
+    <!-- shoulders / racing jersey -->
+    <path android:fillColor="#0A2B67" android:pathData="M20,108 C22,83 32,71 54,69 C76,71 87,83 89,108 Z"/>
+    <path android:fillColor="#11161F" android:pathData="M20,108 C23,89 29,80 38,75 L43,108 Z M88,108 C85,89 79,80 70,75 L65,108 Z"/>
+    <path android:fillColor="#F6D31F" android:pathData="M31,84 L77,94 L75,100 L29,90 Z"/>
+    <path android:fillColor="#3E8DFF" android:pathData="M34,76 L74,76 L70,82 L38,82 Z"/>
+
+    <!-- neck -->
+    <path android:fillColor="#EDB98E" android:pathData="M46,66h16v14h-16z"/>
+
+    <!-- ears -->
+    <path android:fillColor="#EAB186" android:pathData="M24,48 C19,47 18,56 22,60 C24,62 28,59 29,55 L29,48 Z M84,48 C89,47 90,56 86,60 C84,62 80,59 79,55 L79,48 Z"/>
+
+    <!-- face -->
+    <path android:fillColor="#F3C29B" android:pathData="M29,39 C31,26 40,21 54,21 C68,21 77,27 79,40 L78,55 C76,66 67,72 54,73 C41,72 32,66 30,55 Z"/>
+    <path android:fillColor="#F8D1AD" android:pathData="M35,41 C37,31 44,27 54,27 C64,27 71,31 73,41 L72,54 C70,62 63,67 54,68 C45,67 38,62 36,54 Z"/>
+
+    <!-- hair -->
+    <path android:fillColor="#C8A35B" android:pathData="M31,36 C34,24 43,19 55,19 C67,19 75,25 77,37 C70,32 65,30 59,31 C53,27 45,29 40,34 C37,34 34,35 31,36 Z"/>
+    <path android:fillColor="#E3C270" android:pathData="M38,34 C42,27 48,25 55,27 C60,24 66,27 70,31 C62,30 58,33 54,34 C49,31 44,32 38,34 Z"/>
+
+    <!-- cap crown -->
+    <path android:fillColor="#1163D7" android:pathData="M24,34 C28,19 39,13 55,13 C69,13 80,19 85,31 L79,39 C67,34 43,33 28,39 Z"/>
+    <path android:fillColor="#2D80F0" android:pathData="M31,29 C36,18 45,16 55,16 C66,16 74,21 78,30 C63,26 45,26 31,29 Z"/>
+    <path android:fillColor="#F6D31F" android:pathData="M48,14h12l5,18h-8z"/>
+    <!-- cap brim -->
+    <path android:fillColor="#051733" android:pathData="M27,36 C42,32 66,32 81,37 C74,40 61,41 50,40 C42,46 29,44 23,41 Z"/>
+
+    <!-- eyes -->
+    <path android:fillColor="#FFFFFF" android:pathData="M38,46a6,5 0,1 0,12,0a6,5 0,1 0,-12,0 M58,46a6,5 0,1 0,12,0a6,5 0,1 0,-12,0"/>
+    <path android:fillColor="#2F78C5" android:pathData="M41,46a3.3,3.5 0,1 0,6.6,0a3.3,3.5 0,1 0,-6.6,0 M61,46a3.3,3.5 0,1 0,6.6,0a3.3,3.5 0,1 0,-6.6,0"/>
+    <path android:fillColor="#071421" android:pathData="M43,46a1.6,2 0,1 0,3.2,0a1.6,2 0,1 0,-3.2,0 M63,46a1.6,2 0,1 0,3.2,0a1.6,2 0,1 0,-3.2,0"/>
+
+    <!-- nose and smile -->
+    <path android:fillColor="#D99A78" android:pathData="M52,49 L50,56 C52,57 55,57 57,55 Z"/>
+    <path android:fillColor="#9B493F" android:pathData="M43,59 C48,64 60,65 67,58 C63,67 49,70 43,59 Z"/>
+    <path android:fillColor="#F6C1A7" android:pathData="M48,61 C53,64 59,64 63,61 C58,65 53,66 48,61 Z"/>
+
+    <!-- tiny racing number plate -->
+    <path android:fillColor="#FFFFFF" android:pathData="M43,88h22v15h-22z"/>
+    <path android:fillColor="#F6D31F" android:pathData="M46,91h16v9h-16z"/>
+    <path android:fillColor="#071B35" android:pathData="M52,93h4v5h-4z"/>
+</vector>
