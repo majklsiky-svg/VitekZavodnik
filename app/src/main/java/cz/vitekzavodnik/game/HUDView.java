@@ -15,7 +15,7 @@ import java.util.Locale;
 public final class HUDView extends View {
     public interface Listener { void onPauseRequested(); }
 
-    private final PremiumGameRenderer renderer;
+    private final UltraRenderer renderer;
     private final Listener listener;
     private final Paint p=new Paint(Paint.ANTI_ALIAS_FLAG);
     private final float d;
@@ -23,7 +23,7 @@ public final class HUDView extends View {
     private float joyBaseX,joyBaseY,joyX,joyY,camLastX,camLastY,joyRadius;
     private final RectF pauseRect=new RectF(),jumpRect=new RectF(),actionRect=new RectF();
 
-    public HUDView(Context context, PremiumGameRenderer renderer, Listener listener){
+    public HUDView(Context context, UltraRenderer renderer, Listener listener){
         super(context);this.renderer=renderer;this.listener=listener;d=getResources().getDisplayMetrics().density;
         p.setTypeface(android.graphics.Typeface.create("sans",android.graphics.Typeface.BOLD));setWillNotDraw(false);
     }
@@ -33,7 +33,6 @@ public final class HUDView extends View {
         joyRadius=70*d;joyBaseX=98*d;joyBaseY=h-96*d;if(joyPointer<0){joyX=joyBaseX;joyY=joyBaseY;}
         GameSnapshot s=renderer.getSnapshot();
 
-        // quest card
         p.setShader(new LinearGradient(18*d,16*d,Math.min(w*.66f,610*d),84*d,Color.argb(235,8,24,48),Color.argb(220,17,72,128),Shader.TileMode.CLAMP));
         c.drawRoundRect(18*d,16*d,Math.min(w*.66f,610*d),86*d,20*d,20*d,p);p.setShader(null);
         p.setColor(Color.rgb(255,215,38));c.drawRoundRect(18*d,16*d,25*d,86*d,20*d,20*d,p);
@@ -53,7 +52,6 @@ public final class HUDView extends View {
         p.setColor(Color.argb(225,8,24,48));c.drawRoundRect(pauseRect,16*d,16*d,p);p.setColor(Color.rgb(255,215,38));p.setStrokeWidth(4*d);
         c.drawLine(w-44*d,29*d,w-44*d,49*d,p);c.drawLine(w-29*d,29*d,w-29*d,49*d,p);
 
-        // joystick
         p.setColor(Color.argb(70,255,255,255));c.drawCircle(joyBaseX,joyBaseY,joyRadius,p);
         p.setStyle(Paint.Style.STROKE);p.setStrokeWidth(3*d);p.setColor(Color.argb(170,120,190,255));c.drawCircle(joyBaseX,joyBaseY,joyRadius,p);
         p.setStrokeWidth(2*d);p.setColor(Color.argb(90,255,215,40));c.drawCircle(joyBaseX,joyBaseY,joyRadius-10*d,p);p.setStyle(Paint.Style.FILL);
@@ -96,7 +94,6 @@ public final class HUDView extends View {
     private void updateJoy(float x,float y){
         float dx=x-joyBaseX,dy=y-joyBaseY,len=(float)Math.sqrt(dx*dx+dy*dy);if(len>joyRadius){dx*=joyRadius/len;dy*=joyRadius/len;}
         joyX=joyBaseX+dx;joyY=joyBaseY+dy;
-        // direct control: the direction of the thumb equals the direction of travel
         renderer.setMove(dx/joyRadius,dy/joyRadius);
     }
 }
